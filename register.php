@@ -73,7 +73,7 @@ if (isset($_POST['btn_register'])) {
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #1a0f0a 0%, #3d2516 50%, #5d3a24 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -129,7 +129,7 @@ if (isset($_POST['btn_register'])) {
         button {
             width: 100%;
             padding: 11px;
-            background-color: #27ae60;
+            background: linear-gradient(135deg, #1a0f0a 0%, #3d2516 50%, #5d3a24 100%);
             color: white;
             border: none;
             border-radius: 5px;
@@ -180,7 +180,7 @@ if (isset($_POST['btn_register'])) {
 <body>
 
 <div class="card">
-    <h2>📝 Register</h2>
+    <h2>Register</h2>
     <p class="subtitle">Buat akun baru</p>
 
     <!-- Tampilkan pesan -->
@@ -208,8 +208,8 @@ if (isset($_POST['btn_register'])) {
 
         <label for="role">Role / Hak Akses</label>
         <select id="role" name="role">
-            <option value="mahasiswa">Mahasiswa</option>
-            <option value="admin">Admin</option>
+            <option value="kasir">Kasir</option>
+            <option value="owner">Owner</option>
         </select>
 
         <button type="submit" name="btn_register">Daftar Sekarang</button>

@@ -60,7 +60,7 @@ if (isset($_POST['btn_login'])) {
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f2f5;
+            background: linear-gradient(135deg, #1a0f0a 0%, #3d2516 50%, #5d3a24 100%);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -118,7 +118,7 @@ if (isset($_POST['btn_login'])) {
         button {
             width: 100%;
             padding: 11px;
-            background-color: #3498db;
+            background: linear-gradient(135deg, #1a0f0a 0%, #3d2516 50%, #5d3a24 100%);
             color: white;
             border: none;
             border-radius: 5px;
@@ -153,8 +153,8 @@ if (isset($_POST['btn_login'])) {
 <body>
 
 <div class="card">
-    <h2>🔐 Login</h2>
-    <p class="subtitle">Masuk ke sistem</p>
+    <h2>Login</h2>
+    <p class="subtitle">Siblings.CO</p>
 
     <!-- Tampilkan pesan error jika ada -->
     <?php if ($pesan != "") : ?>
