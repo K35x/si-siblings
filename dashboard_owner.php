@@ -1,3 +1,45 @@
+<?php
+// =============================================
+// FILE: dashboard_admin.php
+// Fungsi: Halaman khusus untuk role ADMIN
+// =============================================
+
+session_start();
+include "koneksi.php";
+
+// ---- PROTEKSI HALAMAN ----
+// Cek apakah user sudah login
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Cek apakah role-nya owner
+// Kalau bukan owner, tendang ke halaman kasir
+if ($_SESSION['role'] != 'owner') {
+    header("Location: dashboard_kasir.php");
+    exit();
+}
+
+// Ambil semua data user untuk ditampilkan
+$query_user = "SELECT * FROM tb_login ORDER BY id_user ASC";
+$hasil_user = mysqli_query($koneksi, $query_user);
+
+// ---- PROSES HAPUS USER ----
+if (isset($_GET['hapus'])) {
+    $id_hapus = (int)$_GET['hapus'];  // cast ke integer untuk keamanan
+
+    // Jangan izinkan admin hapus akunnya sendiri
+    if ($id_hapus == $_SESSION['id_user']) {
+        $notif = "Tidak bisa menghapus akun sendiri!";
+    } else {
+        mysqli_query($koneksi, "DELETE FROM tb_login WHERE id_user = $id_hapus");
+        header("Location: dashboard_owner.php?notif=hapus");
+        exit();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
