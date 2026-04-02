@@ -1,0 +1,4 @@
+- Login : [Aditya](https://github.com/AdityaPratama1206).
+- Dashboard Owner : [Kalyca](https://github.com/kalycamariansyah-lgtm) & [Alin](https://github.com/alinaktaviani-tech). 
+- Dashboard Kasir : [Kamal](https://github.com/K35x).
+- Database : [Jojo](https://github.com/Im-Jojo06).

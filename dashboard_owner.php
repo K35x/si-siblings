@@ -113,6 +113,36 @@ if (isset($_GET['hapus'])) {
             margin-right: 15px;
         }
 
+        .sidebar .sidebar-logout {
+            margin-top: auto;
+            padding: 20px 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.24);
+        }
+
+        .sidebar .logout-form {
+            margin: 0;
+            width: 100%;
+        }
+
+        .sidebar .logout-button {
+            width: 100%;
+            padding: 12px 25px;
+            border: 1.5px solid var(--white);
+            border-radius: 50px;
+            background: transparent;
+            color: var(--white);
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .sidebar .logout-button:hover,
+        .sidebar .logout-button:focus {
+            background: var(--white);
+            color: var(--dark-brown);
+        }
+
         /* MAIN CONTENT */
         .main-content {
             flex: 1;
@@ -239,6 +269,11 @@ if (isset($_GET['hapus'])) {
             <a href="#"> Keuangan</a>
             <a href="#"> Katalog produk</a>
         </nav>
+        <div class="sidebar-logout">
+            <form class="logout-form" action="logout.php" method="post">
+                <button class="logout-button" type="submit">Logout</button>
+            </form>
+        </div>
     </aside>
 
     <main class="main-content">
